@@ -1,4 +1,6 @@
 import numpy as np
+import qiskit
+import qiskit as *
 
 def encoder(image):
     image_ = image.reshape(len(image)*len(image))
@@ -18,7 +20,6 @@ def encoder(image):
                     qc.x(l)
 
         qc.mcry(image_[len - i], np.arange(n_qubits - 1), n_qubits-1)
-        
         
         for j in range(n_qubits - 1):
             b = format(j, f'0{n_}b')
